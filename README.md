@@ -6,9 +6,9 @@ Unlike ad-hoc prompt workflows that jump straight into writing unverified code, 
 
 ---
 
-## End-to-End AI-SDLC Pipeline
+## End-to-End SDLC Pipeline
 
-Each skill produces structured, versioned Markdown and machine-readable artifacts that feed directly into the next stage—supporting both **Greenfield Builds** and **Brownfield Reconstructions**:
+Each skill produces structured, versioned Markdown and machine-readable artefacts that feed directly into the next stage—supporting both **Greenfield Builds** and **Brownfield Reconstructions**:
 
 ```mermaid
 flowchart TD
@@ -38,23 +38,6 @@ flowchart TD
     S07 -->|"Architecture · API · Runbooks"| S08
     S08 -.->|"Remediation & Regression Loop"| S06
 ```
-
----
-
-## The 8 Core Skills Matrix
-
-| # | Skill Name | Lifecycle Stage | Core Capabilities | Key Artifacts Produced |
-| :--- | :--- | :--- | :--- | :--- |
-| **01** | `adaptive-brainstorming-orchestrator` | Discovery & Requirements | 9-Style Adaptive Leadership Engine, RACI Authority Matrix, RAID register, AS-IS/TO-BE flows, ISO/IEC/IEEE 29148 requirements, 10 scenario classes | `GOVERNANCE-CHARTER.md`, `RAID-REGISTER.md`, `SRS.md` |
-| **02** | `adversarial-brainstorming-orchestrator` | Stress-Testing & Feasibility | Bureaucratic, Devil's Advocate & Red-Team opposition loop; SMART goals, CapEx/OpEx TCO math, critical-path schedule, scope kill list | `PROJECT-CHARTER-AND-BRIEF.md`, `FEASIBILITY-AND-REALITY-CHECK.md`, `TECH-AND-BUDGET-PLAN.md` |
-| **03** | `end-to-end-prd-and-design-doc-generator` | Product & System Design | Wide competitive/OSS research, conclusive ideation, tech stack ADRs, C4 diagrams, ERDs, API contracts, STRIDE & UX specs | `RESEARCH-AND-IDEATION.md`, `PRD.md`, `DESIGN-DOC.md` |
-| **04** | `developer-setup-helper` | Bootstrap & Environment | Installs/runs `graphify` code graph, initializes Git & SemVer, hardens `.gitignore` & secrets, audits gaps, benchmarks modern OSS libraries | `PROJECT-STATUS-AUDIT.md`, `TECH-AND-OSS-RESEARCH.md`, `.env.example` |
-| **05** | `end-to-end-codebase-explainer` | Codebase Intelligence | Evidence-based repository mapping (`file:line`), entry points, execution lifecycle, Mermaid sequence diagrams, security posture, onboarding path | `CODEBASE-EXPLAINER.md` |
-| **06** | `iterative-planner-and-builder` | Architecture, Build & DevSecOps | Brownfield/greenfield engineering, OSS reuse, 3NF DB design, `Module → Class → Method` WBS, structured JSON logging, mandatory code reviews, SAST/SCA/DAST/SBOM | `ARCHITECTURE-AND-OSS.md`, `DATABASE-DESIGN.md`, `PLAN.md`, `PROGRESS.md`, `TEST-REPORT.md`, `AUDIT-TRAIL.md` |
-| **07** | `tech-doc-writer-aisdlc-orchestrator` | Documentation & Handover | Code-to-doc drift audit, ADRs, OpenAPI specs, QA/compliance packs, deployment guides, SRE incident runbooks, release notes | `DOCS-PLAN.md`, `docs/ARCHITECTURE.md`, `docs/API-REFERENCE.md`, `docs/RUNBOOK.md`, `CHANGELOG.md` |
-| **08** | `end-to-end-codebase-reviewer-qa-security` | QA, AppSec & Release Gate | 8 specialist audit engines, test-env-only Rules of Engagement, DAST/IAST, AuthZ matrix, 17 business-logic checks, 19 DB checks, 15 frontend checks, supply-chain/crypto/DR, post-deploy risk forecast, 12-step remediation loop | `RULES-OF-ENGAGEMENT.md`, `AUDIT-REPORT.md`, `FINDINGS-REGISTER.md`, `audit-results/*` (`JSON`/`CSV`/`SARIF`/`CycloneDX`/`HTML`) |
-
----
 
 ## Core Architectural Pillars
 
@@ -191,43 +174,6 @@ All planning, build, and audit skills persist state in Markdown tracking files (
 Resume execution from the last verified checkpoint in PROGRESS.md and PLAN.md.
 ```
 
----
-
-## Skill Details
-
-### 01 · `adaptive-brainstorming-orchestrator`
-- **Role:** Situational & Enterprise Governance Orchestrator.
-- **How It Works:** Dynamically shifts across **9 leadership archetypes** (*Situational, Charismatic/Visionary, Transformational, Coaching, Democratic, Servant, Transactional, Laissez-Faire, and Autocratic*) to resolve stakeholder ambiguity, build a **RACI Authority Matrix**, maintain a **RAID Register**, map **AS-IS / TO-BE** workflows, and compile an **ISO/IEC/IEEE 29148 `SRS.md`** covering 8 requirement classes and 10 scenario types.
-
-### 02 · `adversarial-brainstorming-orchestrator`
-- **Role:** Bureaucratic Gatekeeper, Devil's Advocate & Red-Team Auditor.
-- **How It Works:** Actively opposes every unverified assumption, optimistic deadline, and bloated feature request via a structured **Audit & Counter-Loop**. Forces SMART goals, line-item CapEx/OpEx TCO math, critical-path schedules with risk-adjusted contingency buffers, and an explicit **Out-of-Scope Kill List**.
-
-### 03 · `end-to-end-prd-and-design-doc-generator`
-- **Role:** Lead Product & Architecture Orchestrator.
-- **How It Works:** Conducts wide competitive and open-source research, synthesizes 2–3 competing product theses into one justified direction, records Architecture Decision Records (`ADR-xxx`), and generates decision-complete `PRD.md` and `DESIGN-DOC.md` specifications (C4 diagrams, normalized ERDs, OpenAPI contracts, STRIDE threat models, and UX edge states).
-
-### 04 · `developer-setup-helper`
-- **Role:** Developer Environment & Bootstrap Orchestrator.
-- **How It Works:** Verifies and runs `graphify` to map symbol/dependency graphs, initializes Git and Semantic Versioning, hardens `.gitignore` and `.env.example`, scans for exposed keys/credentials, audits completed vs. unbuilt code, and benchmarks modern open-source libraries with a Pros & Cons matrix.
-
-### 05 · `end-to-end-codebase-explainer`
-- **Role:** Lead Codebase Analyst.
-- **How It Works:** Performs a read-only, evidence-backed investigation citing exact `file:line` references—documenting tech stack versions, C4/sequence Mermaid diagrams, entry points, end-to-end data flows, security posture, outdated `README.md` contradictions, and a prioritized First-Day Reading Path.
-
-### 06 · `iterative-planner-and-builder`
-- **Role:** Enterprise Engineering & Governance Orchestrator.
-- **How It Works:** Decomposes systems in strict dependency/data-flow order (`Module → Class → Method`), enforces 3NF database design, structured JSON logging with PII redaction, mandatory `engineering-code-reviewer` gates, and shift-left **SAST, SCA, DAST, and CycloneDX/SPDX SBOM** verification—backed by `PLAN.md`, `PROGRESS.md`, `TEST-REPORT.md`, and `AUDIT-TRAIL.md`.
-
-### 07 · `tech-doc-writer-aisdlc-orchestrator`
-- **Role:** Technical Documentation & AI-SDLC Synchronization Orchestrator.
-- **How It Works:** Audits code-to-doc drift across all upstream AI-SDLC artifacts and generates synchronized engineering and operational documentation (`docs/ARCHITECTURE.md`, `docs/adr/ADR-*.md`, `docs/DATA-MODEL.md`, `docs/API-REFERENCE.md`, `docs/SECURITY-AND-COMPLIANCE.md`, `docs/DEPLOYMENT.md`, `docs/RUNBOOK.md`, and `CHANGELOG.md`).
-
-### 08 · `end-to-end-codebase-reviewer-qa-security`
-- **Role:** Lead Assurance, QA & Security Orchestrator.
-- **How It Works:** Operates across **8 separated specialist audit engines** within a strict test-environment-only `RULES-OF-ENGAGEMENT.md` boundary. Executes automated baselines, runtime DAST/IAST, actor-to-resource AuthZ matrices, **17 business-logic abuse checks**, **19 database security/integrity checks**, **15 frontend/accessibility checks**, **14 supply-chain checks**, **15 cryptography/identity checks**, **12 backup/DR restore checks**, a mandatory **Post-Deployment Risk Forecast**, **6 independent release verdicts**, machine-readable exports (`JSON`, `CSV`, `SARIF`, `CycloneDX`, `HTML`), and a write-authorized **12-step remediation loop**.
-
----
 
 ## License
 
